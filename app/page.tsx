@@ -1,4 +1,4 @@
-import YouTubeEmbed from '@/components/YouTubeEmbed'
+import YouTubeEmbed from '../components/YouTubeEmbed'
 
 const books = [
   { title: 'Hot Paws, Cool Shoes!', url: 'https://a.co/d/8NRUryj' },
@@ -92,7 +92,7 @@ export default function Page() {
             </div>
           </div>
           {/* Replace the ID below with your video ID, e.g. https://www.youtube.com/watch?v=abc123 -> abc123 */}
-          <YouTubeEmbed id="dQw4w9WgXcQ" />
+          <YouTubeEmbed id="W0bqI8CEYVE" />
         </div>
       </section>
 
