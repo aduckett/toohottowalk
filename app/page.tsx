@@ -89,8 +89,8 @@ export default function Page() {
             <div className="text-center p-6">
               <div className="text-6xl">🐾</div>
               <p className="mt-2 font-medium">Phoenix sun tested • Pup approved</p>
-            </div>
-          </div>
+        </div>
+        </div>
         </div>
       </section>
 
