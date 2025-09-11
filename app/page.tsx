@@ -179,6 +179,31 @@ export default function Page() {
   </div>
 </section>
 
+{/* Dog Shoes */}
+      <section id="shoes" className="mx-auto max-w-6xl px-4 py-12">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="text-2xl font-semibold">Dog Shoes for Every Season</h3>
+            <p className="mt-2 text-gray-700">Low‑cost, practical paw protection for summer heat, winter chill, and rocky trails.</p>
+            <ul className="mt-3 text-gray-700 list-disc list-inside">
+              <li>Summer: heat‑shielded soles for scorching sidewalks</li>
+              <li>Winter: warm, water‑resistant booties</li>
+              <li>Trail: rugged grip for desert and mountain terrain</li>
+            </ul>
+            <p className="mt-3 text-xs text-gray-500">Supported by sponsors: Ruffwear • DogBoots • NelliAuction</p>
+          </div>
+          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
+          <Image
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757552611/Untitled_design_ieq0nx.png"
+            alt="Happy dog enjoying the Phoenix sun"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        </div>
+      </section>
+
       {/* Sleeping Dog Bowls */}
       <section id="bowls" className="bg-gray-50 border-y border-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-12">
@@ -208,31 +233,6 @@ export default function Page() {
     <SponsorForm />
   </div>
 </section>
-
-      {/* Dog Shoes */}
-      <section id="shoes" className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold">Dog Shoes for Every Season</h3>
-            <p className="mt-2 text-gray-700">Low‑cost, practical paw protection for summer heat, winter chill, and rocky trails.</p>
-            <ul className="mt-3 text-gray-700 list-disc list-inside">
-              <li>Summer: heat‑shielded soles for scorching sidewalks</li>
-              <li>Winter: warm, water‑resistant booties</li>
-              <li>Trail: rugged grip for desert and mountain terrain</li>
-            </ul>
-            <p className="mt-3 text-xs text-gray-500">Supported by sponsors: Ruffwear • DogBoots • NelliAuction</p>
-          </div>
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
-          <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757552611/Untitled_design_ieq0nx.png"
-            alt="Happy dog enjoying the Phoenix sun"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        </div>
-      </section>
 
       {/* Sponsors */}
       <section className="bg-gray-50 border-y border-gray-100">
