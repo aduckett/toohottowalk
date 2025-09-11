@@ -1,4 +1,5 @@
 import YouTubeEmbed from '../components/YouTubeEmbed'
+import BookCarousel from '../components/BookCarousel';
 import Image from 'next/image';
 
 const books = [
@@ -74,69 +75,55 @@ export default function Page() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">Protect paws. Hydrate pups. Celebrate stories.</h2>
-            <p className="mt-4 text-gray-700">Arizona heat is real. <span className="font-medium">Too Hot To Walk</span> helps dog parents with community water bowls, low‑cost shoes for every season, and a growing library of kid‑friendly dog books.</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#books" className="rounded-2xl bg-black text-white px-4 py-2 text-sm md:text-base hover:opacity-90">Shop Books on Amazon</a>
-              <a href="#interviews" className="rounded-2xl border px-4 py-2 text-sm md:text-base hover:bg-gray-50">Watch Dog Interviews</a>
-            </div>
-            <p className="mt-3 text-xs text-gray-500">Sponsors: Ruffwear • DogBoots • NelliAuction</p>
-          </div>
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
-          <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
-            alt="Happy dog enjoying the Phoenix sun"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        </div>
-      </section>
+      <section className="relative overflow-hidden">
+  {/* background vibes */}
+  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50" />
+  <div className="absolute inset-0 -z-10 opacity-20 paw-bg" />
 
-      {/* Books */}
+  <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">Protect paws. Hydrate pups. Celebrate stories.</h2>
+        <p className="mt-4 text-gray-700">
+          Arizona heat is real. <span className="font-medium">Too Hot To Walk</span> helps dog parents with
+          community water bowls, low-cost shoes for every season, and a growing library of kid-friendly dog books.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a href="#books" className="rounded-2xl bg-black text-white px-4 py-2 text-sm md:text-base hover:opacity-90">Shop Books on Amazon</a>
+          <a href="#interviews" className="rounded-2xl border px-4 py-2 text-sm md:text-base hover:bg-gray-50">Watch Dog Interviews</a>
+        </div>
+        <p className="mt-3 text-xs text-gray-600">Sponsors: Ruffwear • DogBoots • NelliAuction</p>
+      </div>
+
+      {/* keep your existing Cloudinary hero image block */}
+      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
+        <Image
+          src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
+          alt="Happy dog enjoying the Phoenix sun"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     {/* Books */}
 <section id="books" className="bg-gray-50 border-y border-gray-100">
   <div className="mx-auto max-w-6xl px-4 py-12">
     <div className="flex items-end justify-between gap-4">
       <h3 className="text-2xl font-semibold">Kid Dog Books</h3>
-      {/* Link to your first book or a collection page */}
-      <a href={books[0].amazonUrl} target="_blank" className="text-sm underline">Shop on Amazon</a>
+      <a href={books[0].amazonUrl} target="_blank" className="text-sm underline">
+        Shop on Amazon
+      </a>
     </div>
-    <p className="mt-2 text-gray-700">Nine heart-warming titles for young readers and dog-loving families.</p>
+    <p className="mt-2 text-gray-700">
+      Nine heart-warming titles for young readers and dog-loving families.
+    </p>
 
-    {/* Horizontal slider */}
-    <div className="mt-6 overflow-x-auto no-scrollbar">
-      <div className="flex gap-4 snap-x snap-mandatory">
-        {books.map((b) => (
-          <a
-            key={b.title}
-            href={b.amazonUrl}
-            target="_blank"
-            className="snap-start shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 group"
-            aria-label={`Open ${b.title} on Amazon`}
-          >
-            <div className="relative aspect-[4/5] rounded-2xl bg-white ring-1 ring-black/5 overflow-hidden">
-              {/* Use next/image for optimization; 1971x2000 will be resized automatically */}
-              <Image
-                src={b.coverUrl}
-                alt={`${b.title} cover`}
-                fill
-                sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 16rem, 18rem"
-                className="object-cover"
-                priority={false}
-              />
-            </div>
-            <div className="mt-3 flex items-center justify-between">
-              <h4 className="text-sm sm:text-base font-medium leading-tight group-hover:underline">{b.title}</h4>
-              <span className="ml-2 text-[10px] sm:text-xs rounded-full border px-2 py-0.5">Amazon</span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
+    <BookCarousel books={books} />
   </div>
 </section>
 

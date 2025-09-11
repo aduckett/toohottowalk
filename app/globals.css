@@ -4,6 +4,12 @@
 
 html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-/* Hide horizontal scrollbar (keeps it scrollable) */
+/* Hide horizontal scrollbar but keep scrollable */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Subtle paw-dot background */
+.paw-bg {
+  background-image: radial-gradient(circle at 12px 12px, rgba(0,0,0,0.06) 2px, transparent 2px);
+  background-size: 24px 24px;
+}
