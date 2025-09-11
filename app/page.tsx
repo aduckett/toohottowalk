@@ -1,4 +1,5 @@
 import YouTubeEmbed from '../components/YouTubeEmbed'
+import SponsorForm from '../components/SponsorForm';
 import BookCarousel from '../components/BookCarousel';
 import Image from 'next/image';
 
@@ -59,7 +60,7 @@ export default function Page() {
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-2xl bg-black text-white grid place-items-center font-bold">TW</div>
-            <h1 className="text-xl font-semibold tracking-tight">Too Hot To Walk</h1>
+            <h1 className="text-xl font-semibold tracking-tight font-display">Too Hot To Walk</h1>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#books" className="hover:opacity-80">Kid Dog Books</a>
@@ -83,7 +84,7 @@ export default function Page() {
   <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
     <div className="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight">Protect paws. Hydrate pups. Celebrate stories.</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight font-display">Protect paws. Hydrate pups. Celebrate stories.</h2>
         <p className="mt-4 text-gray-700">
           Arizona heat is real. <span className="font-medium">Too Hot To Walk</span> helps dog parents with
           community water bowls, low-cost shoes for every season, and a growing library of kid-friendly dog books.
@@ -144,6 +145,40 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Join the Pack */}
+<section id="community" className="bg-gray-50 border-y border-gray-100">
+  <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="flex items-end justify-between gap-4">
+      <h3 className="text-2xl font-semibold font-display">Join the Pack</h3>
+      <p className="text-sm text-gray-600">Follow for interviews, meetups, and pup tips</p>
+    </div>
+
+    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank"
+         className="group rounded-2xl bg-white ring-1 ring-black/5 p-6 hover:shadow-md transition">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 grid place-items-center text-white text-xl">IG</div>
+          <div>
+            <p className="font-medium">Instagram</p>
+            <p className="text-sm text-gray-600">Cute paws, events, and behind-the-scenes</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/@TooHotToWalk" target="_blank"
+         className="group rounded-2xl bg-white ring-1 ring-black/5 p-6 hover:shadow-md transition">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-xl bg-red-600 grid place-items-center text-white text-xl">YT</div>
+          <div>
+            <p className="font-medium">YouTube</p>
+            <p className="text-sm text-gray-600">Dog interviews, tips, and community stories</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
       {/* Sleeping Dog Bowls */}
       <section id="bowls" className="bg-gray-50 border-y border-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-12">
@@ -165,6 +200,14 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12">
+  <div className="rounded-2xl bg-white ring-1 ring-black/5 p-6 md:p-8">
+    <h3 className="text-2xl font-semibold font-display">Sponsor a Bowl</h3>
+    <p className="mt-2 text-gray-700">Add your logo to a community water bowl and keep local pups hydrated.</p>
+    <SponsorForm />
+  </div>
+</section>
 
       {/* Dog Shoes */}
       <section id="shoes" className="mx-auto max-w-6xl px-4 py-12">

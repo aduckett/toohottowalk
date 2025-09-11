@@ -13,3 +13,4 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   background-image: radial-gradient(circle at 12px 12px, rgba(0,0,0,0.06) 2px, transparent 2px);
   background-size: 24px 24px;
 }
+.font-display { font-family: "Fredoka", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }

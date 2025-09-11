@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Inter, Fredoka } from 'next/font/google';
+const inter = Inter({ subsets: ['latin'] });
+const fredoka = Fredoka({ subsets: ['latin'], weight: ['400','500','600','700'] });
+
 
 export const metadata: Metadata = {
   title: 'Too Hot To Walk',
