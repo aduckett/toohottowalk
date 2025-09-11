@@ -196,9 +196,9 @@ export default function Page() {
         <div className="mx-auto max-w-6xl px-4 py-10">
           <p className="text-sm uppercase tracking-wider text-gray-500">Supported by</p>
           <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Ruffwear (logo)</div>
-            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">DogBoots (logo)</div>
-            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">NelliAuction (logo)</div>
+            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Maricopa County</div>
+            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Kindle Direct Publishing</div>
+            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Nellis Auction</div>
           </div>
         </div>
       </section>
