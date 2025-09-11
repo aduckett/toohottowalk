@@ -87,14 +87,13 @@ export default function Page() {
           </div>
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
           <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547895/IMG_0365_lpmsvn.png"
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551473/Untitled_design_s1wfby.png"
             alt="Happy dog enjoying the Phoenix sun"
             fill
             className="object-cover"
             priority
           />
         </div>
-          <p className="mt-2 font-medium">Phoenix sun tested • Pup approved</p>
         </div>
       </section>
 
