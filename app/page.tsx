@@ -87,7 +87,7 @@ export default function Page() {
           </div>
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
           <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551473/Untitled_design_s1wfby.png"
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
             alt="Happy dog enjoying the Phoenix sun"
             fill
             className="object-cover"
