@@ -85,12 +85,16 @@ export default function Page() {
             </div>
             <p className="mt-3 text-xs text-gray-500">Sponsors: Ruffwear • DogBoots • NelliAuction</p>
           </div>
-          <div className="aspect-[4/3] rounded-3xl bg-gray-100 grid place-items-center text-gray-500">
-            <div className="text-center p-6">
-              <div className="text-6xl">🐾</div>
-              <p className="mt-2 font-medium">Phoenix sun tested • Pup approved</p>
+          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
+          <Image
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547895/IMG_0365_lpmsvn.png"
+            alt="Happy dog enjoying the Phoenix sun"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
-        </div>
+          <p className="mt-2 font-medium">Phoenix sun tested • Pup approved</p>
         </div>
       </section>
 
