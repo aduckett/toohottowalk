@@ -59,7 +59,18 @@ export default function Page() {
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-2xl bg-black text-white grid place-items-center font-bold">TW</div>
+            <a
+  href="/"
+  aria-label="Too Hot To Walk — home"
+  className="h-10 w-10 rounded-2xl bg-black text-white grid place-items-center hover:opacity-90 transition"
+>
+  <img
+    src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757613783/THTWpaw512_bmyorn.svg"
+    alt=""
+    className="h-6 w-6"
+  />
+</a>
+
             <h1 className="text-xl font-semibold tracking-tight font-display">Too Hot To Walk</h1>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">

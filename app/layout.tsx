@@ -20,7 +20,24 @@ export const metadata: Metadata = {
     description: 'Protect paws. Hydrate pups. Celebrate stories.',
     images: ['/og-image.png'],
   },
-}
+  icons: {
+    // Favicon / general icon (SVG)
+    icon: [
+      {
+        url: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757613783/THTWpaw512_bmyorn.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    // Apple touch icon (must be PNG 180x180)
+    apple: [
+      {
+        url: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757613841/THTWpaw180_y3syrw.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+  },
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
