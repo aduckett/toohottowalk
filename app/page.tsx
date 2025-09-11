@@ -192,7 +192,15 @@ export default function Page() {
             </ul>
             <p className="mt-3 text-xs text-gray-500">Supported by sponsors: Ruffwear • DogBoots • NelliAuction</p>
           </div>
-          <div className="aspect-[4/3] rounded-3xl bg-gray-100 grid place-items-center text-6xl">👢</div>
+          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
+          <Image
+            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757552611/Untitled_design_ieq0nx.png"
+            alt="Happy dog enjoying the Phoenix sun"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         </div>
       </section>
 
