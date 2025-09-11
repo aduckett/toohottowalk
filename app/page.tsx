@@ -1,16 +1,54 @@
 import YouTubeEmbed from '../components/YouTubeEmbed'
+import Image from 'next/image';
 
 const books = [
-  { title: 'Hot Paws, Cool Shoes!', url: 'https://a.co/d/8NRUryj' },
-  { title: 'Drink Up, Pup!', url: 'https://a.co/d/1kBq9Yo' },
-  { title: 'Ali: Always By My Side', url: 'https://a.co/d/cUNmiV5' },
-  { title: 'Remi’s New Game', url: 'https://a.co/d/e7VvAhU' },
-  { title: 'Simba: Small but Brave', url: 'https://a.co/d/25nGXKH' },
-  { title: 'Meadow’s Place', url: 'https://a.co/d/i5XMpAI' },
-  { title: 'The Curious Case of Beefy Bull', url: 'https://a.co/d/99daSRR' },
-  { title: 'Operation Margo Makeover', url: 'https://a.co/d/ao0U9sX' },
-  { title: "Malibu's Adventures", url: 'https://a.co/d/iT3cbtP' },
-]
+  {
+    title: 'Hot Paws, Cool Shoes!',
+    amazonUrl: 'https://a.co/d/8NRUryj',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547914/Hot_Paws_Cool_Shoes.zip_-_Title_gzz2iz.png',
+  },
+  {
+    title: 'Drink Up, Pup!',
+    amazonUrl: 'https://a.co/d/1kBq9Yo',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548151/IMG_1534_ml9afp.jpg',
+  },
+  {
+    title: 'Ali: Always By My Side',
+    amazonUrl: 'https://a.co/d/cUNmiV5',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Title_wvitjf.png',
+  },
+  {
+    title: 'Remi’s New Game',
+    amazonUrl: 'https://a.co/d/e7VvAhU',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Margo_draft.zip_-_30_lemyvx.png',
+  },
+  {
+    title: 'Simba: Small but Brave',
+    amazonUrl: 'https://a.co/d/25nGXKH',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548177/Copy_of_Beefy_Bull_Manuscript_Final.zip_-_26_nyocdh.png',
+  },
+  {
+    title: 'Meadow’s Place',
+    amazonUrl: 'https://a.co/d/i5XMpAI',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548189/Margo_draft.zip_-_29_ugnbgy.png',
+  },
+  {
+    title: 'The Curious Case of Beefy Bull',
+    amazonUrl: 'https://a.co/d/99daSRR',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547907/KPD_Malibu_Adventure_-_39_pfr73t.png',
+  },
+  {
+    title: 'Operation Margo Makeover',
+    amazonUrl: 'https://a.co/d/ao0U9sX',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548182/KPD_Malibu_Adventure_-_38_skzjlv.png',
+  },
+  {
+    title: 'Malibu Adventures',
+    amazonUrl: 'https://a.co/d/iT3cbtP',
+    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548182/KPD_Malibu_Adventure_-_1_fwmhnq.png',
+  },
+];
+
 
 export default function Page() {
   return (
@@ -57,28 +95,48 @@ export default function Page() {
       </section>
 
       {/* Books */}
-      <section id="books" className="bg-gray-50 border-y border-gray-100">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="flex items-end justify-between gap-4">
-            <h3 className="text-2xl font-semibold">Kid Dog Books</h3>
-            <a href={books[0].url} target="_blank" className="text-sm underline">Shop all on Amazon</a>
-          </div>
-          <p className="mt-2 text-gray-700">Nine heart‑warming titles for young readers and dog‑loving families.</p>
+<section id="books" className="bg-gray-50 border-y border-gray-100">
+  <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="flex items-end justify-between gap-4">
+      <h3 className="text-2xl font-semibold">Kid Dog Books</h3>
+      {/* Link to your first book or a collection page */}
+      <a href={books[0].amazonUrl} target="_blank" className="text-sm underline">Shop on Amazon</a>
+    </div>
+    <p className="mt-2 text-gray-700">Nine heart-warming titles for young readers and dog-loving families.</p>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-            {books.map((b) => (
-              <a key={b.title} href={b.url} target="_blank" className="group block rounded-2xl border bg-white p-5 hover:shadow-lg transition-shadow">
-                <div className="aspect-[4/5] rounded-xl bg-gray-100 grid place-items-center text-5xl">📗</div>
-                <div className="mt-4 flex items-center justify-between">
-                  <h4 className="font-medium group-hover:underline">{b.title}</h4>
-                  <span className="text-xs rounded-full border px-2 py-0.5">Amazon</span>
-                </div>
-                <p className="mt-1 text-sm text-gray-600">Tap to view on Amazon.</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+    {/* Horizontal slider */}
+    <div className="mt-6 overflow-x-auto no-scrollbar">
+      <div className="flex gap-4 snap-x snap-mandatory">
+        {books.map((b) => (
+          <a
+            key={b.title}
+            href={b.amazonUrl}
+            target="_blank"
+            className="snap-start shrink-0 w-48 sm:w-56 md:w-64 lg:w-72 group"
+            aria-label={`Open ${b.title} on Amazon`}
+          >
+            <div className="relative aspect-[4/5] rounded-2xl bg-white ring-1 ring-black/5 overflow-hidden">
+              {/* Use next/image for optimization; 1971x2000 will be resized automatically */}
+              <Image
+                src={b.coverUrl}
+                alt={`${b.title} cover`}
+                fill
+                sizes="(max-width: 640px) 12rem, (max-width: 768px) 14rem, (max-width: 1024px) 16rem, 18rem"
+                className="object-cover"
+                priority={false}
+              />
+            </div>
+            <div className="mt-3 flex items-center justify-between">
+              <h4 className="text-sm sm:text-base font-medium leading-tight group-hover:underline">{b.title}</h4>
+              <span className="ml-2 text-[10px] sm:text-xs rounded-full border px-2 py-0.5">Amazon</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Interviews */}
       <section id="interviews" className="mx-auto max-w-6xl px-4 py-12">

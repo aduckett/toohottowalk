@@ -2,9 +2,13 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      // Add remote hosts if you use external images, e.g. Instagram CDN
-      // { protocol: 'https', hostname: 'images.unsplash.com' }
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
     ],
   },
 };
+
 export default nextConfig;
