@@ -90,8 +90,8 @@ export default function Page() {
           community water bowls, low-cost shoes for every season, and a growing library of kid-friendly dog books.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href="#books" className="rounded-2xl bg-black text-white px-4 py-2 text-sm md:text-base hover:opacity-90">Shop Books on Amazon</a>
-          <a href="#interviews" className="rounded-2xl border px-4 py-2 text-sm md:text-base hover:bg-gray-50">Watch Dog Interviews</a>
+          <a href="#books" className="btn">Shop Books on Amazon</a>
+          <a href="#interviews" className="btn-ghost">Watch Dog Interviews</a>
         </div>
         <p className="mt-3 text-xs text-gray-600">Sponsors: Ruffwear • DogBoots • NelliAuction</p>
       </div>
@@ -227,7 +227,7 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12">
-  <div className="rounded-2xl bg-white ring-1 ring-black/5 p-6 md:p-8">
+  <div className="card p-6 md:p-8">
     <h3 className="text-2xl font-semibold font-display">Sponsor a Bowl</h3>
     <p className="mt-2 text-gray-700">Add your logo to a community water bowl and keep local pups hydrated.</p>
     <SponsorForm />

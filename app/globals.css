@@ -13,4 +13,34 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   background-image: radial-gradient(circle at 12px 12px, rgba(0,0,0,0.06) 2px, transparent 2px);
   background-size: 24px 24px;
 }
-.font-display { font-family: "Fredoka", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+.font-display { font-family: var(--font-display), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+
+/* Reusable UI bits */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:1rem; padding:.5rem 1rem; font-size:.875rem; font-weight:500;
+  background:#000; color:#fff; transition:filter .15s ease;
+}
+.btn:hover { filter: brightness(.92); }
+
+.btn-ghost {
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:1rem; padding:.5rem 1rem; font-size:.875rem; font-weight:500;
+  border:1px solid rgba(0,0,0,.08); transition:background .15s ease;
+}
+.btn-ghost:hover { background: rgba(0,0,0,.04); }
+
+.card {
+  border-radius:1rem; background:#fff; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  border:1px solid rgba(0,0,0,.06);
+}
+
+/* Nicer input focus */
+input, select, textarea {
+  border-radius:1rem; border:1px solid rgba(0,0,0,.12);
+  padding:.5rem .75rem;
+}
+input:focus, select:focus, textarea:focus {
+  outline:none; box-shadow: 0 0 0 2px rgba(234,88,12,.25);
+  border-color: rgba(234,88,12,.45);
+}
