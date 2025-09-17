@@ -1,56 +1,20 @@
 import YouTubeEmbed from '../components/YouTubeEmbed'
 import SponsorForm from '../components/SponsorForm';
 import BookCarousel from '../components/BookCarousel';
+import ReserveShoesForm from '../components/ReserveShoesForm';
 import Image from 'next/image';
 
 const books = [
-  {
-    title: 'Hot Paws, Cool Shoes!',
-    amazonUrl: 'https://a.co/d/8NRUryj',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547914/Hot_Paws_Cool_Shoes.zip_-_Title_gzz2iz.png',
-  },
-  {
-    title: 'Drink Up, Pup!',
-    amazonUrl: 'https://a.co/d/1kBq9Yo',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548151/IMG_1534_ml9afp.jpg',
-  },
-  {
-    title: 'Ali: Always By My Side',
-    amazonUrl: 'https://a.co/d/cUNmiV5',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Title_wvitjf.png',
-  },
-  {
-    title: 'Remi’s New Game',
-    amazonUrl: 'https://a.co/d/e7VvAhU',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Margo_draft.zip_-_30_lemyvx.png',
-  },
-  {
-    title: 'Simba: Small but Brave',
-    amazonUrl: 'https://a.co/d/25nGXKH',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548177/Copy_of_Beefy_Bull_Manuscript_Final.zip_-_26_nyocdh.png',
-  },
-  {
-    title: 'Meadow’s Place',
-    amazonUrl: 'https://a.co/d/i5XMpAI',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548189/Margo_draft.zip_-_29_ugnbgy.png',
-  },
-  {
-    title: 'The Curious Case of Beefy Bull',
-    amazonUrl: 'https://a.co/d/99daSRR',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547907/KPD_Malibu_Adventure_-_39_pfr73t.png',
-  },
-  {
-    title: 'Operation Margo Makeover',
-    amazonUrl: 'https://a.co/d/ao0U9sX',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548182/KPD_Malibu_Adventure_-_38_skzjlv.png',
-  },
-  {
-    title: 'Malibu Adventures',
-    amazonUrl: 'https://a.co/d/iT3cbtP',
-    coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548182/KPD_Malibu_Adventure_-_1_fwmhnq.png',
-  },
+  { title: 'Hot Paws, Cool Shoes!', amazonUrl: 'https://a.co/d/8NRUryj', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547914/Hot_Paws_Cool_Shoes.zip_-_Title_gzz2iz.png' },
+  { title: 'Drink Up, Pup!', amazonUrl: 'https://a.co/d/1kBq9Yo', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548151/IMG_1534_ml9afp.jpg' },
+  { title: 'Ali: Always By My Side', amazonUrl: 'https://a.co/d/cUNmiV5', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Title_wvitjf.png' },
+  { title: 'Remi’s New Game', amazonUrl: 'https://a.co/d/e7VvAhU', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Margo_draft.zip_-_30_lemyvx.png' },
+  { title: 'Simba: Small but Brave', amazonUrl: 'https://a.co/d/25nGXKH', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548177/Copy_of_Beefy_Bull_Manuscript_Final.zip_-_26_nyocdh.png' },
+  { title: 'Meadow’s Place', amazonUrl: 'https://a.co/d/i5XMpAI', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548189/Margo_draft.zip_-_29_ugnbgy.png' },
+  { title: 'The Curious Case of Beefy Bull', amazonUrl: 'https://a.co/d/99daSRR', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547907/KPD_Malibu_Adventure_-_39_pfr73t.png' },
+  { title: 'Operation Margo Makeover', amazonUrl: 'https://a.co/d/ao0U9sX', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548182/KPD_Malibu_Adventure_-_38_skzjlv.png' },
+  { title: 'Malibu Adventures', amazonUrl: 'https://a.co/d/iT3cbtP', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548182/KPD_Malibu_Adventure_-_1_fwmhnq.png' },
 ];
-
 
 export default function Page() {
   return (
@@ -60,200 +24,155 @@ export default function Page() {
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a
-  href="/"
-  aria-label="Too Hot To Walk — home"
-  className="h-10 w-10 rounded-2xl bg-black text-white grid place-items-center hover:opacity-90 transition"
->
-  <img
-    src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757613783/THTWpaw512_bmyorn.svg"
-    alt=""
-    className="h-6 w-6"
-  />
-</a>
-
+              href="/"
+              aria-label="Too Hot To Walk — home"
+              className="h-10 w-10 rounded-2xl bg-black text-white grid place-items-center hover:opacity-90 transition"
+            >
+              <img
+                src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757613783/THTWpaw512_bmyorn.svg"
+                alt=""
+                className="h-6 w-6"
+              />
+            </a>
             <h1 className="text-xl font-semibold tracking-tight font-display">Too Hot To Walk</h1>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#books" className="hover:opacity-80">Kid Dog Books</a>
             <a href="#interviews" className="hover:opacity-80">Dog Interviews</a>
-            <a href="#bowls" className="hover:opacity-80">Sleeping Dog Bowls</a>
             <a href="#shoes" className="hover:opacity-80">Dog Shoes</a>
+            <a href="#sleepingdog" className="hover:opacity-80">Sleeping Dog AZ</a>
+            <a href="/contact" className="hover:opacity-80">Contact</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="rounded-xl border px-3 py-1.5 text-sm hover:bg-gray-50">Instagram</a>
-            <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="rounded-xl bg-black text-white px-3 py-1.5 text-sm hover:opacity-90">YouTube</a>
+            <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="btn-ghost">Instagram</a>
+            <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="btn">YouTube</a>
           </div>
         </div>
       </header>
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-  {/* background vibes */}
-  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50" />
-  <div className="absolute inset-0 -z-10 opacity-20 paw-bg" />
-
-  <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-    <div className="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight font-display">Protect paws. Hydrate pups. Celebrate stories.</h2>
-        <p className="mt-4 text-gray-700">
-          Arizona heat is real. <span className="font-medium">Too Hot To Walk</span> helps dog parents with
-          community water bowls, low-cost shoes for every season, and a growing library of kid-friendly dog books.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href="#books" className="btn">Shop Books on Amazon</a>
-          <a href="#interviews" className="btn-ghost">Watch Dog Interviews</a>
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50" />
+        <div className="absolute inset-0 -z-10 opacity-20 paw-bg" />
+        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight font-display">
+                Protect paws. Hydrate pups. Celebrate stories.
+              </h2>
+              <p className="mt-4 text-gray-700">
+                Arizona heat is real. <span className="font-medium">Too Hot To Walk</span> brings the community together
+                through kid-friendly dog books, interviews, and practical paw protection for every season.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="#books" className="btn">Shop the 9-book series</a>
+                <a href="#interviews" className="btn-ghost">Watch interviews</a>
+              </div>
+              <p className="mt-3 text-xs text-gray-600">Partners: Nellis Auction • Ruffwear • DogBoots</p>
+            </div>
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5">
+              <Image
+                src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
+                alt="Happy dog enjoying the Phoenix sun"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
-        <p className="mt-3 text-xs text-gray-600">Sponsors: Ruffwear • DogBoots • NelliAuction</p>
-      </div>
+      </section>
 
-      {/* keep your existing Cloudinary hero image block */}
-      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
-        <Image
-          src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
-          alt="Happy dog enjoying the Phoenix sun"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-    </div>
-  </div>
-</section>
+      {/* Impact (thin bar) */}
+      <section className="bg-white border-y border-gray-100">
+        <div className="mx-auto max-w-6xl px-4 py-3 text-sm text-gray-700 text-center">
+          Profits from <span className="font-medium">Hot Paws, Cool Shoes!</span> and <span className="font-medium">Drink Up, Pup!</span> help fund <span className="font-medium">free dog shoes</span> for Arizona families, thanks to our partners.
+        </div>
+      </section>
 
+      {/* Books (Primary) */}
+      <section id="books" className="bg-gray-50 border-y border-gray-100">
+        <div className="mx-auto max-w-6xl px-4 py-12">
+          <div className="flex items-end justify-between gap-4">
+            <h3 className="text-2xl font-semibold font-display">Kid Dog Books</h3>
+            <a href={books[0].amazonUrl} target="_blank" className="text-sm underline">Shop on Amazon</a>
+          </div>
+          <p className="mt-2 text-gray-700">Nine heart-warming titles for young readers and dog-loving families.</p>
+          <BookCarousel books={books} />
+        </div>
+      </section>
 
-     {/* Books */}
-<section id="books" className="bg-gray-50 border-y border-gray-100">
-  <div className="mx-auto max-w-6xl px-4 py-12">
-    <div className="flex items-end justify-between gap-4">
-      <h3 className="text-2xl font-semibold">Kid Dog Books</h3>
-      <a href={books[0].amazonUrl} target="_blank" className="text-sm underline">
-        Shop on Amazon
-      </a>
-    </div>
-    <p className="mt-2 text-gray-700">
-      Nine heart-warming titles for young readers and dog-loving families.
-    </p>
-
-    <BookCarousel books={books} />
-  </div>
-</section>
-
-
-      {/* Interviews */}
+      {/* Interviews (YouTube) */}
       <section id="interviews" className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-semibold">Dog Interviews</h3>
-            <p className="mt-2 text-gray-700">Real stories from Arizona’s dog community—trainers, vets, and everyday pup parents. Catch every episode on our YouTube channel.</p>
+            <h3 className="text-2xl font-semibold font-display">Dog Interviews</h3>
+            <p className="mt-2 text-gray-700">Real stories from Arizona’s dog community—trainers, vets, and everyday pup parents.</p>
             <div className="mt-4 flex gap-3">
-              <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="rounded-xl bg-black text-white px-4 py-2 text-sm hover:opacity-90">Watch on YouTube</a>
-              <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="rounded-xl border px-4 py-2 text-sm hover:bg-gray-50">Follow on Instagram</a>
+              <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="btn">Watch on YouTube</a>
+              <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="btn-ghost">Follow on Instagram</a>
             </div>
           </div>
-          {/* Replace the ID below with your video ID, e.g. https://www.youtube.com/watch?v=abc123 -> abc123 */}
           <YouTubeEmbed id="W0bqI8CEYVE" />
         </div>
       </section>
 
-      {/* Join the Pack */}
-<section id="community" className="bg-gray-50 border-y border-gray-100">
-  <div className="mx-auto max-w-6xl px-4 py-12">
-    <div className="flex items-end justify-between gap-4">
-      <h3 className="text-2xl font-semibold font-display">Join the Pack</h3>
-      <p className="text-sm text-gray-600">Follow for interviews, meetups, and pup tips</p>
-    </div>
-
-    <div className="mt-6 grid gap-4 sm:grid-cols-2">
-      <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank"
-         className="group rounded-2xl bg-white ring-1 ring-black/5 p-6 hover:shadow-md transition">
-        <div className="flex items-center gap-4">
-          <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-pink-500 to-purple-500 grid place-items-center text-white text-xl">IG</div>
-          <div>
-            <p className="font-medium">Instagram</p>
-            <p className="text-sm text-gray-600">Cute paws, events, and behind-the-scenes</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.youtube.com/@TooHotToWalk" target="_blank"
-         className="group rounded-2xl bg-white ring-1 ring-black/5 p-6 hover:shadow-md transition">
-        <div className="flex items-center gap-4">
-          <div className="h-12 w-12 rounded-xl bg-red-600 grid place-items-center text-white text-xl">YT</div>
-          <div>
-            <p className="font-medium">YouTube</p>
-            <p className="text-sm text-gray-600">Dog interviews, tips, and community stories</p>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-{/* Dog Shoes */}
+      {/* Dog Shoes */}
       <section id="shoes" className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold">Dog Shoes for Every Season</h3>
-            <p className="mt-2 text-gray-700">Low‑cost, practical paw protection for summer heat, winter chill, and rocky trails.</p>
-            <ul className="mt-3 text-gray-700 list-disc list-inside">
-              <li>Summer: heat‑shielded soles for scorching sidewalks</li>
-              <li>Winter: warm, water‑resistant booties</li>
-              <li>Trail: rugged grip for desert and mountain terrain</li>
-            </ul>
-            <p className="mt-3 text-xs text-gray-500">Supported by sponsors: Ruffwear • DogBoots • NelliAuction</p>
-          </div>
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
-          <Image
-            src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757552611/Untitled_design_ieq0nx.png"
-            alt="Happy dog enjoying the Phoenix sun"
-            fill
-            className="object-cover"
-            priority
-          />
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold font-display">Dog Shoes for Every Season</h3>
+          <p className="mt-2 text-gray-700">Low-cost, practical paw protection for summer heat, winter chill, and rocky trails.</p>
+          <ul className="mt-3 text-gray-700 list-disc list-inside">
+            <li>Summer: heat-shielded soles for scorching sidewalks</li>
+            <li>Winter: warm, water-resistant booties</li>
+            <li>Trail: rugged grip for desert and mountain terrain</li>
+          </ul>
+          <p className="mt-3 text-xs text-gray-500">With support from Nellis Auction, Ruffwear, and other partners.</p>
         </div>
+
+        {/* Reserve form (turn on now, inventory system can come next) */}
+        <div className="card p-6 md:p-8">
+          <h4 className="font-medium">Reserve a pair (local pick-up or shipping)</h4>
+          <ReserveShoesForm />
+          <p className="mt-2 text-xs text-gray-500">We’ll confirm availability by email. Final payment arranged via email or at a pop-up.</p>
         </div>
       </section>
 
-      {/* Sleeping Dog Bowls */}
-      <section id="bowls" className="bg-gray-50 border-y border-gray-100">
+      {/* Sleeping Dog AZ CTA */}
+      <section id="sleepingdog" className="bg-gray-50 border-y border-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-12">
-          <h3 className="text-2xl font-semibold">Sleeping Dog Bowls</h3>
-          <p className="mt-2 text-gray-700">Public water bowls installed along parks and paths—functional art that keeps pups hydrated. Sponsor a bowl and add your logo where water pours in.</p>
-          <div className="mt-4 grid md:grid-cols-3 gap-5">
-            <div className="rounded-2xl border bg-white p-5">
-              <h4 className="font-medium">Sponsor a Bowl</h4>
-              <p className="mt-1 text-sm text-gray-600">Businesses and individuals can sponsor a bowl, including logo placement.</p>
+          <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div className="card p-6 md:p-8">
+              <h3 className="text-2xl font-semibold font-display">Sleeping Dog AZ</h3>
+              <p className="mt-2 text-gray-700">
+                Learn more about our community water bowls and how to support the project. Donations help keep pups hydrated across Arizona.
+              </p>
+              <a
+                href="https://sleepingdogaz.example" // TODO: replace with your real Sleeping Dog AZ URL
+                target="_blank"
+                className="btn mt-4 w-fit"
+              >
+                Visit Sleeping Dog AZ
+              </a>
             </div>
-            <div className="rounded-2xl border bg-white p-5">
-              <h4 className="font-medium">Arizona First</h4>
-              <p className="mt-1 text-sm text-gray-600">We’re starting in Arizona, with First Nation sites planned next.</p>
-            </div>
-            <div className="rounded-2xl border bg-white p-5">
-              <h4 className="font-medium">Commissions</h4>
-              <p className="mt-1 text-sm text-gray-600">Custom commissions available based on our prototype sculpture.</p>
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5">
+              <Image
+                src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547895/IMG_0365_lpmsvn.png"
+                alt="Community water bowl"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
+      {/* Sponsor a Bowl (kept) */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-  <div className="card p-6 md:p-8">
-    <h3 className="text-2xl font-semibold font-display">Sponsor a Bowl</h3>
-    <p className="mt-2 text-gray-700">Add your logo to a community water bowl and keep local pups hydrated.</p>
-    <SponsorForm />
-  </div>
-</section>
-
-      {/* Sponsors */}
-      <section className="bg-gray-50 border-y border-gray-100">
-        <div className="mx-auto max-w-6xl px-4 py-10">
-          <p className="text-sm uppercase tracking-wider text-gray-500">Supported by</p>
-          <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Maricopa County</div>
-            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Kindle Direct Publishing</div>
-            <div className="h-16 rounded-xl border bg-white grid place-items-center text-gray-500">Nellis Auction</div>
-          </div>
+        <div className="card p-6 md:p-8">
+          <h3 className="text-2xl font-semibold font-display">Sponsor a Bowl</h3>
+          <p className="mt-2 text-gray-700">Add your logo to a community water bowl and keep local pups hydrated.</p>
+          <SponsorForm />
         </div>
       </section>
 
@@ -265,14 +184,31 @@ export default function Page() {
             <p className="text-sm text-gray-600">Phoenix, Arizona</p>
           </div>
           <div className="flex gap-3">
-            <a href="#books" className="rounded-xl border px-3 py-1.5 text-sm hover:bg-gray-50">Books</a>
-            <a href="#interviews" className="rounded-xl border px-3 py-1.5 text-sm hover:bg-gray-50">Interviews</a>
-            <a href="#bowls" className="rounded-xl border px-3 py-1.5 text-sm hover:bg-gray-50">Bowls</a>
-            <a href="#shoes" className="rounded-xl border px-3 py-1.5 text-sm hover:bg-gray-50">Shoes</a>
+            <a href="#books" className="btn-ghost">Books</a>
+            <a href="#interviews" className="btn-ghost">Interviews</a>
+            <a href="#shoes" className="btn-ghost">Shoes</a>
+            <a href="#sleepingdog" className="btn-ghost">Sleeping Dog AZ</a>
+            <a href="/contact" className="btn-ghost">Contact</a>
           </div>
           <div className="text-sm text-gray-600">© {new Date().getFullYear()} Too Hot To Walk</div>
         </div>
       </footer>
+
+      {/* Book Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": books.map((b, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "item": { "@type": "Book", "name": b.title, "url": b.amazonUrl, "image": b.coverUrl }
+            }))
+          })
+        }}
+      />
     </div>
   )
 }
