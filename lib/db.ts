@@ -1,5 +1,2 @@
-// lib/db.ts
-import { neon } from '@neondatabase/serverless';
-
-const connStr = process.env.NEON_DATABASE_URL!;
-export const sql = neon(connStr);
+import { neon } from "@neondatabase/serverless";
+export const sql = neon(process.env.NEON_DATABASE_URL!);
