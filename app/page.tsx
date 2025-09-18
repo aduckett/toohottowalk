@@ -103,19 +103,40 @@ export default function Page() {
       </section>
 
       {/* Interviews (YouTube) */}
-      <section id="interviews" className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold font-display">Dog Interviews</h3>
-            <p className="mt-2 text-gray-700">Real stories from Arizona’s dog community—trainers, vets, and everyday pup parents.</p>
-            <div className="mt-4 flex gap-3">
-              <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="btn">Watch on YouTube</a>
-              <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="btn-ghost">Follow on Instagram</a>
-            </div>
-          </div>
-          <YouTubeEmbed id="W0bqI8CEYVE" />
-        </div>
-      </section>
+<section id="interviews" className="mx-auto max-w-6xl px-4 py-12">
+  <div className="grid md:grid-cols-2 gap-8 items-center">
+    <div className="relative overflow-hidden rounded-3xl p-6 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 ring-1 ring-black/5">
+      <span className="inline-flex items-center gap-2 text-xs font-medium bg-white/70 px-3 py-1 rounded-full ring-1 ring-black/5">
+        🐾 Featured Interview
+      </span>
+      <h3 className="mt-3 text-2xl font-semibold font-display">Dog Interviews</h3>
+      <p className="mt-2 text-gray-700">
+        Real stories from Arizona’s dog community—trainers, vets, rescuers, and everyday pup parents.
+        Tips on heat safety, hydration, and paw protection.
+      </p>
+      <ul className="mt-3 text-sm text-gray-700 list-disc list-inside">
+        <li>How to check pavement temperature (and when to boot up)</li>
+        <li>Hydration habits for desert hikes</li>
+        <li>Training around shoes & new surfaces</li>
+      </ul>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="btn">Watch on YouTube</a>
+        <a href="https://www.youtube.com/@TooHotToWalk?sub_confirmation=1" target="_blank" className="btn-ghost">Subscribe</a>
+      </div>
+    </div>
+
+    {/* Hero video */}
+    <YouTubeEmbed id="W0bqI8CEYVE" />
+  </div>
+
+  {/* Optional: quick links row under the feature */}
+  <div className="mt-6 flex flex-wrap gap-2">
+    <a href="https://www.youtube.com/@TooHotToWalk/playlists" target="_blank" className="btn-ghost text-xs">Playlists</a>
+    <a href="https://www.youtube.com/@TooHotToWalk/videos" target="_blank" className="btn-ghost text-xs">All videos</a>
+    <a href="https://www.youtube.com/@TooHotToWalk/community" target="_blank" className="btn-ghost text-xs">Community</a>
+  </div>
+</section>
+
 
       {/* Dog Shoes */}
       <section id="shoes" className="mx-auto max-w-6xl px-4 py-12">
@@ -170,16 +191,6 @@ export default function Page() {
     </div>
   </div>
 </section>
-
-
-      {/* Sponsor a Bowl (kept) */}
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="card p-6 md:p-8">
-          <h3 className="text-2xl font-semibold font-display">Sponsor a Bowl</h3>
-          <p className="mt-2 text-gray-700">Add your logo to a community water bowl and keep local pups hydrated.</p>
-          <SponsorForm />
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="mx-auto max-w-6xl px-4 py-10">
