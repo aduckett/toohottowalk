@@ -139,33 +139,38 @@ export default function Page() {
       </section>
 
       {/* Sleeping Dog AZ CTA */}
-      <section id="sleepingdog" className="bg-gray-50 border-y border-gray-100">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div className="card p-6 md:p-8">
-              <h3 className="text-2xl font-semibold font-display">Sleeping Dog AZ</h3>
-              <p className="mt-2 text-gray-700">
-                Learn more about our community water bowls and how to support the project. Donations help keep pups hydrated across Arizona.
-              </p>
-              <a
-                href="https://sleepingdogaz.example" // TODO: replace with your real Sleeping Dog AZ URL
-                target="_blank"
-                className="btn mt-4 w-fit"
-              >
-                Visit Sleeping Dog AZ
-              </a>
-            </div>
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5">
-              <Image
-                src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547895/IMG_0365_lpmsvn.png"
-                alt="Community water bowl"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
+<section id="sleepingdog" className="bg-gray-50 border-y border-gray-100">
+  <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="grid md:grid-cols-2 gap-6 items-center">
+      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5">
+        <Image
+          src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1758137334/20250917_1227_Thirsty_Dogs_Duo_remix_01k5cj7yc1fkebvaf9af1x36r8_1_mmoleb.png"
+          alt="Sleeping Dog AZ community water bowls"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      <div className="card p-6 md:p-8">
+        <h3 className="text-2xl font-semibold font-display">Sleeping Dog AZ</h3>
+        <p className="mt-2 text-gray-700">
+          Learn how our sculptural water bowls keep pups hydrated across Arizona—and how you can help expand to more neighborhoods.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          {/* TODO: paste your real Sleeping Dog AZ site URL below */}
+          <a href="https://sleepingdogaz.example" target="_blank" className="btn-ghost">Learn more</a>
+
+          {/* TODO: paste your real GiveButter campaign URL below */}
+          <a href="https://givebutter.com/YOUR_CAMPAIGN" target="_blank" className="btn">Donate on GiveButter</a>
         </div>
-      </section>
+        <p className="mt-3 text-xs text-gray-500">
+          100% of book profits from <span className="font-medium">Hot Paws, Cool Shoes!</span> and <span className="font-medium">Drink Up, Pup!</span> support free dog shoes and community water access.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Sponsor a Bowl (kept) */}
       <section className="mx-auto max-w-6xl px-4 py-12">
