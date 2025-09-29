@@ -212,7 +212,7 @@ export default function Page() {
       <div className="card p-6 md:p-8">
         <h3 className="text-2xl font-semibold font-display">Sleeping Dog AZ</h3>
         <p className="mt-2 text-gray-700">
-          Learn how our sculptural water bowls keep pups hydrated across Arizona—and how you can help expand to more neighborhoods.
+          Learn how our sculptural water bowls keep pups hydrated across Arizona and how you can help expand to more neighborhoods.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           {/* TODO: paste your real Sleeping Dog AZ site URL below */}
