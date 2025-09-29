@@ -38,7 +38,8 @@ export default function Page() {
                 className="h-6 w-6"
               />
             </a>
-            <h1 className="text-xl font-semibold tracking-tight font-display">Too Hot To Walk</h1>
+            <h1 className="text-lg md:text-xl font-semibold tracking-tight font-display">Too Hot To Walk</h1>
+
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#books" className="hover:opacity-80">Kid Dog Books</a>
@@ -117,7 +118,8 @@ export default function Page() {
       <section id="books" className="bg-gray-50 border-y border-gray-100">
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="flex items-end justify-between gap-4">
-            <h3 className="text-2xl font-semibold font-display">Kid Dog Books</h3>
+            <h3 className="text-xl md:text-2xl font-semibold">Kid Dog Books</h3>
+
             <a href={books[0].amazonUrl} target="_blank" className="text-sm underline">Shop on Amazon</a>
           </div>
           <p className="mt-2 text-gray-700">Nine heart-warming titles for young readers and dog-loving families.</p>
@@ -132,7 +134,8 @@ export default function Page() {
       <span className="inline-flex items-center gap-2 text-xs font-medium bg-white/70 px-3 py-1 rounded-full ring-1 ring-black/5">
         🐾 Featured Interview
       </span>
-      <h3 className="mt-3 text-2xl font-semibold font-display">Dog Interviews</h3>
+      <h3 className="text-xl md:text-2xl font-semibold">Dog Interviews</h3>
+
       <p className="mt-2 text-gray-700">
         Real stories from Arizona’s dog community—trainers, vets, rescuers, and everyday pup parents.
         Tips on heat safety, hydration, and paw protection.
@@ -172,9 +175,8 @@ export default function Page() {
   <span>Community price</span><span className="opacity-80">•</span><span>$10 per pair</span>
 </div>
 
-        <h3 className="text-2xl md:text-3xl font-semibold leading-tight font-display">
-          Dog Shoes for Every Season
-        </h3>
+        <h3 className="text-xl md:text-3xl font-semibold leading-tight font-display">Dog Shoes for Every Season</h3>
+
         <p className="text-gray-700">
           Low-cost, practical paw protection for <span className="font-medium">summer heat</span>,
           <span className="font-medium"> winter chill</span>, and <span className="font-medium">rocky trails</span>.
@@ -233,7 +235,8 @@ export default function Page() {
       </div>
 
       <div className="card p-6 md:p-8">
-        <h3 className="text-2xl font-semibold font-display">Sleeping Dog AZ</h3>
+        <h3 className="text-xl md:text-2xl font-semibold">Sleeping Dog AZ</h3>
+
         <p className="mt-2 text-gray-700">
           Learn how our sculptural water bowls keep pups hydrated across Arizona and how you can help expand to more neighborhoods.
         </p>
@@ -270,13 +273,13 @@ export default function Page() {
             <p className="font-medium">Too Hot To Walk</p>
             <p className="text-sm text-gray-600">Phoenix, Arizona</p>
           </div>
-          <div className="flex gap-3">
-            <a href="#books" className="btn-ghost">Books</a>
-            <a href="#interviews" className="btn-ghost">Interviews</a>
-            <a href="#shoes" className="btn-ghost">Shoes</a>
-            <a href="#sleepingdog" className="btn-ghost">Sleeping Dog AZ</a>
-            <a href="/contact" className="btn-ghost">Contact</a>
-          </div>
+          <div className="flex gap-3 text-sm md:text-base">
+  <a href="#books" className="rounded-xl border px-3 py-1.5 hover:bg-gray-50">Books</a>
+  <a href="#interviews" className="rounded-xl border px-3 py-1.5 hover:bg-gray-50">Interviews</a>
+  <a href="#bowls" className="rounded-xl border px-3 py-1.5 hover:bg-gray-50">Bowls</a>
+  <a href="#shoes" className="rounded-xl border px-3 py-1.5 hover:bg-gray-50">Shoes</a>
+</div>
+
           <div className="text-sm text-gray-600">© {new Date().getFullYear()} Too Hot To Walk</div>
         </div>
       </footer>
