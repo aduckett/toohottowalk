@@ -4,6 +4,9 @@ import BookCarousel from '../components/BookCarousel';
 import ReserveShoesForm from '../components/ReserveShoesForm';
 import Image from 'next/image';
 import ShoeRequestForm from '../components/ShoeRequestForm';
+import MobileNav from '../components/MobileNav';
+import LiteYouTube from '../components/LiteYouTube';
+
 
 const books = [
   { title: 'Hot Paws, Cool Shoes!', amazonUrl: 'https://a.co/d/8NRUryj', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547914/Hot_Paws_Cool_Shoes.zip_-_Title_gzz2iz.png' },
@@ -45,9 +48,12 @@ export default function Page() {
             <a href="/contact" className="hover:opacity-80">Contact</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="btn-ghost">Instagram</a>
-            <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="btn">YouTube</a>
-          </div>
+  <a href="https://givebutter.com/sleepingdog" target="_blank" className="hidden md:inline rounded-xl bg-amber-500 text-black px-3 py-1.5 text-sm hover:brightness-95">Donate</a>
+  <a href="https://www.instagram.com/toohottowalk/?hl=en" target="_blank" className="hidden md:inline rounded-xl border px-3 py-1.5 text-sm hover:bg-gray-50">Instagram</a>
+  <a href="https://www.youtube.com/@TooHotToWalk" target="_blank" className="hidden md:inline rounded-xl bg-black text-white px-3 py-1.5 text-sm hover:opacity-90">YouTube</a>
+  <MobileNav />
+</div>
+
         </div>
       </header>
 
@@ -71,15 +77,30 @@ export default function Page() {
               </div>
               <p className="mt-3 text-xs text-gray-600">Partners: Nellis Auction • Ruffwear • DogBoots</p>
             </div>
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5">
-              <Image
-                src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
-                alt="Happy dog enjoying the Phoenix sun"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            {/* Mobile image */}
+<div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 md:hidden">
+  <Image
+    src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png" // or a tighter mobile-friendly alt
+    alt="Happy dog enjoying the Phoenix sun"
+    fill
+    sizes="100vw"
+    className="object-cover object-center"
+    priority
+  />
+</div>
+
+{/* Desktop image */}
+<div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 hidden md:block">
+  <Image
+    src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1757551892/Untitled_design_nk0veg.png"
+    alt="Happy dog enjoying the Phoenix sun"
+    fill
+    sizes="(max-width: 1024px) 50vw, 600px"
+    className="object-cover [object-position:center_45%]"
+    priority
+  />
+</div>
+
           </div>
         </div>
       </section>
@@ -146,9 +167,10 @@ export default function Page() {
     <div className="grid md:grid-cols-2 gap-8 items-start">
       {/* Left: copy */}
       <div className="space-y-4">
-        <div className="inline-flex items-center gap-2 rounded-full bg-black text-white px-3 py-1 text-xs">
-          <span>Community price</span><span className="opacity-80">•</span><span>$10 per pair</span>
-        </div>
+        <div className="inline-flex items-center gap-2 rounded-full bg-black text-white px-3 py-1 text-xs md:text-[12px]">
+  <span>Community price</span><span className="opacity-80">•</span><span>$10 per pair</span>
+</div>
+
         <h3 className="text-2xl md:text-3xl font-semibold leading-tight font-display">
           Dog Shoes for Every Season
         </h3>
@@ -228,6 +250,17 @@ export default function Page() {
     </div>
   </div>
 </section>
+
+{/* Mobile sticky CTA */}
+<div className="fixed bottom-0 inset-x-0 z-40 md:hidden">
+  <div className="mx-auto max-w-6xl px-4 pb-[max(12px,env(safe-area-inset-bottom))]">
+    <div className="rounded-2xl bg-white shadow-lg ring-1 ring-black/5 p-2 flex items-center gap-2">
+      <a href="#books" className="flex-1 rounded-xl bg-black text-white px-3 py-2 text-sm text-center">Shop Books</a>
+      <a href="#interviews" className="flex-1 rounded-xl border px-3 py-2 text-sm text-center">Interviews</a>
+      <a href="https://givebutter.com/sleepingdog" target="_blank" className="flex-1 rounded-xl bg-amber-500 text-black px-3 py-2 text-sm text-center">Donate</a>
+    </div>
+  </div>
+</div>
 
       {/* Footer */}
       <footer className="mx-auto max-w-6xl px-4 py-10">
