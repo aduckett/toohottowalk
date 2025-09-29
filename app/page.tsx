@@ -141,55 +141,32 @@ export default function Page() {
 
 {/* Dog Shoes */}
 <section id="shoes" className="relative overflow-hidden">
-  {/* soft background */}
   <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50" />
   <div className="mx-auto max-w-6xl px-4 py-12">
     <div className="grid md:grid-cols-2 gap-8 items-start">
-      {/* Left: copy + form */}
+      {/* Left: copy */}
       <div className="space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full bg-black text-white px-3 py-1 text-xs">
-          <span>Community price</span>
-          <span className="opacity-80">•</span>
-          <span>$10 per pair</span>
+          <span>Community price</span><span className="opacity-80">•</span><span>$10 per pair</span>
         </div>
-
         <h3 className="text-2xl md:text-3xl font-semibold leading-tight font-display">
           Dog Shoes for Every Season
         </h3>
-
         <p className="text-gray-700">
           Low-cost, practical paw protection for <span className="font-medium">summer heat</span>,
           <span className="font-medium"> winter chill</span>, and <span className="font-medium">rocky trails</span>.
           Choose your size (0–9); colors/brand vary so we can keep costs low.
         </p>
-
         <ul className="grid sm:grid-cols-2 gap-2">
-          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
-            <span className="text-lg">☀️</span> <span>Summer heat protection</span>
-          </li>
-          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
-            <span className="text-lg">❄️</span> <span>Winter &amp; cold-pavement help</span>
-          </li>
-          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
-            <span className="text-lg">⛰️</span> <span>Trail grip for rough terrain</span>
-          </li>
-          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
-            <span className="text-lg">📍</span> <span>Pickup • Drop-off • Event pickup</span>
-          </li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2"><span className="text-lg">☀️</span>Summer heat protection</li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2"><span className="text-lg">❄️</span>Winter &amp; cold-pavement help</li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2"><span className="text-lg">⛰️</span>Trail grip for rough terrain</li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2"><span className="text-lg">📍</span>Pickup • Drop-off • Event pickup</li>
         </ul>
-
         <p className="text-xs text-gray-600">
           Proceeds from <em>Hot Paws, Cool Shoes</em> &amp; <em>Drink Up, Pup</em> help fund free shoes for the AZ community.
-          Beginning Summer 2026, for every pair sold, Nellis Auction will match with a pair donated to
-          <span className="font-medium"> Fur The Love of Paws AZ</span>.
+          Beginning Summer 2026, Nellis Auction will match pairs donated to <span className="font-medium">Fur The Love of Paws AZ</span>.
         </p>
-
-        {/* Request form (Formspree) */}
-        <div className="rounded-2xl bg-white ring-1 ring-black/5 p-5">
-          <h4 className="font-medium">Request your pair</h4>
-          <p className="text-sm text-gray-600">We’ll confirm pickup details by email.</p>
-          <ShoeRequestForm />
-        </div>
       </div>
 
       {/* Right: image */}
@@ -200,12 +177,23 @@ export default function Page() {
           fill
           className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, 50vw"
-          priority={false}
         />
+      </div>
+
+      {/* Full-width landscape form row */}
+      <div className="md:col-span-2">
+        <div className="rounded-2xl bg-white ring-1 ring-black/5 p-5 md:p-6">
+          <div className="flex items-center justify-between gap-4">
+            <h4 className="font-medium">Request your pair</h4>
+            <p className="hidden md:block text-sm text-gray-600">We’ll confirm pickup by email • $10 per pair</p>
+          </div>
+          <ShoeRequestForm wide />
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
       {/* Sleeping Dog AZ CTA */}
