@@ -216,10 +216,10 @@ export default function Page() {
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           {/* TODO: paste your real Sleeping Dog AZ site URL below */}
-          <a href="https://sleepingdogaz.example" target="_blank" className="btn-ghost">Learn more</a>
+          <a href="https://sleepingdogaz.com/" target="_blank" className="btn-ghost">Learn more</a>
 
           {/* TODO: paste your real GiveButter campaign URL below */}
-          <a href="https://givebutter.com/YOUR_CAMPAIGN" target="_blank" className="btn">Donate on GiveButter</a>
+          <a href="https://givebutter.com/sleepingdog" target="_blank" className="btn">Donate on GiveButter</a>
         </div>
         <p className="mt-3 text-xs text-gray-500">
           100% of book profits from <span className="font-medium">Hot Paws, Cool Shoes!</span> and <span className="font-medium">Drink Up, Pup!</span> support free dog shoes and community water access.
