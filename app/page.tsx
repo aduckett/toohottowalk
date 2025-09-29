@@ -3,6 +3,7 @@ import SponsorForm from '../components/SponsorForm';
 import BookCarousel from '../components/BookCarousel';
 import ReserveShoesForm from '../components/ReserveShoesForm';
 import Image from 'next/image';
+import ShoeRequestForm from '../components/ShoeRequestForm';
 
 const books = [
   { title: 'Hot Paws, Cool Shoes!', amazonUrl: 'https://a.co/d/8NRUryj', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547914/Hot_Paws_Cool_Shoes.zip_-_Title_gzz2iz.png' },
@@ -138,26 +139,74 @@ export default function Page() {
 </section>
 
 
-      {/* Dog Shoes */}
-      <section id="shoes" className="mx-auto max-w-6xl px-4 py-12">
-        <div className="mb-6">
-          <h3 className="text-2xl font-semibold font-display">Dog Shoes for Every Season</h3>
-          <p className="mt-2 text-gray-700">Low-cost, practical paw protection for summer heat, winter chill, and rocky trails.</p>
-          <ul className="mt-3 text-gray-700 list-disc list-inside">
-            <li>Summer: heat-shielded soles for scorching sidewalks</li>
-            <li>Winter: warm, water-resistant booties</li>
-            <li>Trail: rugged grip for desert and mountain terrain</li>
-          </ul>
-          <p className="mt-3 text-xs text-gray-500">With support from Nellis Auction, Ruffwear, and other partners.</p>
+{/* Dog Shoes */}
+<section id="shoes" className="relative overflow-hidden">
+  {/* soft background */}
+  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50" />
+  <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="grid md:grid-cols-2 gap-8 items-start">
+      {/* Left: copy + form */}
+      <div className="space-y-4">
+        <div className="inline-flex items-center gap-2 rounded-full bg-black text-white px-3 py-1 text-xs">
+          <span>Community price</span>
+          <span className="opacity-80">•</span>
+          <span>$10 per pair</span>
         </div>
 
-        {/* Reserve form (turn on now, inventory system can come next) */}
-        <div className="card p-6 md:p-8">
-          <h4 className="font-medium">Reserve a pair (local pick-up or shipping)</h4>
-          <ReserveShoesForm />
-          <p className="mt-2 text-xs text-gray-500">We’ll confirm availability by email. Final payment arranged via email or at a pop-up.</p>
+        <h3 className="text-2xl md:text-3xl font-semibold leading-tight font-display">
+          Dog Shoes for Every Season
+        </h3>
+
+        <p className="text-gray-700">
+          Low-cost, practical paw protection for <span className="font-medium">summer heat</span>,
+          <span className="font-medium"> winter chill</span>, and <span className="font-medium">rocky trails</span>.
+          Choose your size (0–9); colors/brand vary so we can keep costs low.
+        </p>
+
+        <ul className="grid sm:grid-cols-2 gap-2">
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
+            <span className="text-lg">☀️</span> <span>Summer heat protection</span>
+          </li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
+            <span className="text-lg">❄️</span> <span>Winter &amp; cold-pavement help</span>
+          </li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
+            <span className="text-lg">⛰️</span> <span>Trail grip for rough terrain</span>
+          </li>
+          <li className="flex items-center gap-2 rounded-xl bg-white ring-1 ring-black/5 px-3 py-2">
+            <span className="text-lg">📍</span> <span>Pickup • Drop-off • Event pickup</span>
+          </li>
+        </ul>
+
+        <p className="text-xs text-gray-600">
+          Proceeds from <em>Hot Paws, Cool Shoes</em> &amp; <em>Drink Up, Pup</em> help fund free shoes for the AZ community.
+          Beginning Summer 2026, for every pair sold, Nellis Auction will match with a pair donated to
+          <span className="font-medium"> Fur The Love of Paws AZ</span>.
+        </p>
+
+        {/* Request form (Formspree) */}
+        <div className="rounded-2xl bg-white ring-1 ring-black/5 p-5">
+          <h4 className="font-medium">Request your pair</h4>
+          <p className="text-sm text-gray-600">We’ll confirm pickup details by email.</p>
+          <ShoeRequestForm />
         </div>
-      </section>
+      </div>
+
+      {/* Right: image */}
+      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100">
+        <Image
+          src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1759163403/20250929_0926_Stylish_Dog_in_Desert_simple_compose_01k6b4m5hvfz7agw51rvvntnbs_ctcsay.png"
+          alt="Stylish desert dog wearing shoes"
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority={false}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Sleeping Dog AZ CTA */}
 <section id="sleepingdog" className="bg-gray-50 border-y border-gray-100">
