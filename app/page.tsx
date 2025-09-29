@@ -227,7 +227,7 @@ export default function Page() {
     <div className="grid md:grid-cols-2 gap-6 items-center">
       <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white/70 ring-1 ring-black/5">
         <Image
-          src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1758137334/20250917_1227_Thirsty_Dogs_Duo_remix_01k5cj7yc1fkebvaf9af1x36r8_1_mmoleb.png"
+          src="https://res.cloudinary.com/dizmpjrdk/image/upload/v1759178125/20250929_1331_Dogs_at_Arizona_Park_remix_01k6bjnthrfp8t90w1m5fdb1y6_dbjaju.png"
           alt="Sleeping Dog AZ community water bowls"
           fill
           className="object-cover"
