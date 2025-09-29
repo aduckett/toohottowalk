@@ -64,9 +64,10 @@ export default function Page() {
         <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight font-display">
-                Protect paws. Hydrate pups. Celebrate stories.
-              </h2>
+              <h2 className="text-[22px] leading-[1.15] md:text-4xl font-semibold tracking-tight font-display">
+  Protect paws. Hydrate pups. Celebrate stories.
+</h2>
+
               <p className="mt-4 text-gray-700">
                 Arizona heat is real. <span className="font-medium">Too Hot To Walk</span> brings the community together
                 through kid-friendly dog books, interviews, and practical paw protection for every season.
