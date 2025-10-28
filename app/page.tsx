@@ -10,7 +10,7 @@ import LiteYouTube from '../components/LiteYouTube';
 
 const books = [
   { title: 'Hot Paws, Cool Shoes!', amazonUrl: 'https://a.co/d/8NRUryj', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757547914/Hot_Paws_Cool_Shoes.zip_-_Title_gzz2iz.png' },
-  { title: 'Drink Up, Pup!', amazonUrl: 'https://a.co/d/1kBq9Yo', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548151/IMG_1534_ml9afp.jpg' },
+  { title: 'Drink Up, Pup!', amazonUrl: 'https://a.co/d/1kBq9Yo', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1761669540/DrinkUpPup_Title_srrgvd.png' },
   { title: 'Ali: Always By My Side', amazonUrl: 'https://a.co/d/cUNmiV5', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Title_wvitjf.png' },
   { title: 'Remi’s New Game', amazonUrl: 'https://a.co/d/e7VvAhU', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548181/Margo_draft.zip_-_30_lemyvx.png' },
   { title: 'Simba: Small but Brave', amazonUrl: 'https://a.co/d/25nGXKH', coverUrl: 'https://res.cloudinary.com/dizmpjrdk/image/upload/v1757548177/Copy_of_Beefy_Bull_Manuscript_Final.zip_-_26_nyocdh.png' },
